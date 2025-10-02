@@ -1,0 +1,17 @@
+header {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopping-card {
+    width: 200px;
+    height: calc(100vh - 48px);
+    display: flex;
+    flex-direction: column;
+}
