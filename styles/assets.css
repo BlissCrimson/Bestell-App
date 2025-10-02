@@ -1,11 +1,16 @@
-h4{
+h4 {
     text-align: center;
 }
 
-table{
+table {
     width: 100%;
 }
 
-td, th{
+td,
+th {
     text-align: start;
+}
+
+.color-o {
+    color: #FF8000;
 }

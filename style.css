@@ -1,7 +1,15 @@
 header {
     height: 48px;
+    color: white;
+    background-color: #FF8000;
+    padding: 0px 8px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.header-img {
+    height: 38px;
 }
 
 main {
@@ -9,9 +17,13 @@ main {
     justify-content: space-between;
 }
 
-.shopping-card {
-    width: 200px;
-    height: calc(100vh - 48px);
+.dish-card-wrapper {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dish-card {
+    width: calc(100% - 300px);
+    padding: 16px;
 }

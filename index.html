@@ -5,26 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
+    <link rel="shortcut icon" href="./assets/icons/Favicon/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/standard.css">
 
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./assets/assets.css">
-    <link rel="stylesheet" href="./assets/fonts.css">
-    <link rel="stylesheet" href="./assets/standard.css">
-    
-
+    <script src="./scripts/db-meals.js"></script>
     <script src="./scripts/templates.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
     <header>
+        <div><img class="header-img" src="./assets/icons/Logo/Bestell App- Logo.svg" alt="Logo"></div>
         <nav>
-
+            <p>Hauptgerichte</p>
+            <p>Beilagen</p>
         </nav>
     </header>
 
     <main>
-
+        <div class="dish-card-wrapper">
+            <div class="dish-card">
+                <h1>Paradies Noodles</h1>
+                <span class="color-o">Bewertung (4.2 von 5 Sternen)</span>
+            </div>
+            <div class="basket-wrapper">
+                <div class="basket">
+                    <h4>Warenkorb</h4>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>Zwischensumme</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Lieferkosten</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Gesamt</th>
+                                <th></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
     </main>
 
     <footer>
