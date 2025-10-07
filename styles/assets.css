@@ -14,3 +14,49 @@ th {
 .color-o {
     color: #FF8000;
 }
+
+.bg-bolor-w {
+    background-color: white;
+}
+
+.bg-color-o {
+    background-color: #FF8000;
+}
+
+.border-color {
+    border-color: rgb(94, 94, 94);
+}
+
+.dropdown-menue {
+    position: absolute;
+    background-color: #FF8000;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.top-img {
+    height: 155px;
+    background-image: url("/assets/img/pizza_1920.jpg");
+    background-size: cover;
+}
+
+.central-img {
+    width: 128px;
+    height: 128px;
+    border: 1 solid #FF8000;
+
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.img-central {
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+}
+
+.first-img {
+    object-fit: cover;
+}
