@@ -1,8 +1,8 @@
 function getPizzaTemplates(indexPizzas) {
     return `
-        <div class="meal-box">
-            <div class="" id="" onclick="addToBasket(${indexPizzas})">
-                <img class="add-symbol" src="./assets/icons/symbol/plus.svg" alt="Plus">
+        <div class="meal-box border-color">
+            <div class="add-basket border-color color-o" id="" onclick="addToBasket(${indexPizzas})">
+                +
             </div>
             <div class="meal-show">
                 <h2>${myPizzas[indexPizzas].name}</h2>
