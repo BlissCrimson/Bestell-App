@@ -1,4 +1,5 @@
 header {
+    width: 100%;
     height: 48px;
     color: white;
     background-color: #FF8000;
@@ -8,22 +9,27 @@ header {
     align-items: center;
 }
 
+h3 {
+    color: rgb(77, 77, 77);
+    font-weight: lighter;
+}
+
 .header-img {
     height: 38px;
 }
 
-main {
-    display: flex;
-    justify-content: space-between;
-}
-
 .dish-card-wrapper {
-    width: 100%;
+    width: calc(100% - 300px);
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-grow: 1;
 }
 
-.dish-card {
-    width: calc(100% - 300px);
-    padding: 16px;
+.add-basket {
+    width: 28px;
+    height: 28px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid;
 }
