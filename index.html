@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/dishcard.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
 
@@ -17,47 +18,66 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="init()">
     <header>
-        <div><img class="header-img" src="./assets/icons/Logo/Bestell App- Logo.svg" alt="Logo"></div>
-        <nav>
-            <p>Hauptgerichte</p>
-            <p>Beilagen</p>
-        </nav>
+        <div>
+            <img class="header-img" src="./assets/icons/Logo/Bestell App- Logo.svg" alt="Logo">
+        </div>
+        <div class="dropdown">
+            <nav>
+                <button onclick="dropdownMenue()"></button>
+                <div id="menue" class="dropdown-menue d_none">
+                    <a href="#pizzas">Pizza</a>
+                    <a href="#salads">Salate</a>
+                </div>
+            </nav>
+        </div>
     </header>
-
-    <main>
-        <div class="dish-card-wrapper">
-            <div class="dish-card">
-                <h1>Paradies Noodles</h1>
-                <span class="color-o">Bewertung (4.2 von 5 Sternen)</span>
+    <div class="dish-card-wrapper">
+        <section class="dish-card">
+            <div class="top-img">
+                <!-- <img class="first-img" src="./assets/img/pizza.jpg" alt="Pizza"> -->
             </div>
-            <div class="basket-wrapper">
-                <div class="basket">
-                    <h4>Warenkorb</h4>
-                    <div>
-                        <table>
-                            <tr>
-                                <td>Zwischensumme</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Lieferkosten</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th>Gesamt</th>
-                                <th></th>
-                            </tr>
-                        </table>
-                    </div>
+            <img class="img-central" src="./assets/img/takeaway-noodlebox.svg" alt="Noodlebox">
+
+            <h1>Paradies Noodles</h1>
+            <span class="color-o">Bewertung (4.2 von 5 Sternen)</span>
+            <nav>
+                <a href="#pizza">Haupgerichte</a>
+                <a href="#salads">Salate</a>
+            </nav>
+            <img src="" alt="Pizza">
+            <div aria-label="Pizza" id="pizza" class="">
+                <h2>Pizza</h2>
+            </div>
+            <img src="" alt="Salat">
+            <div aria-label="Salate" id="salads">
+                <h2>Salate</h2>
+            </div>
+        </section>
+        <section class="basket-wrapper">
+            <div class="basket">
+                <h4>Warenkorb</h4>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Zwischensumme</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Lieferkosten</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Gesamt</th>
+                            <th></th>
+                        </tr>
+                    </table>
                 </div>
             </div>
-    </main>
-
-    <footer>
-
-    </footer>
+        </section>
+    </div>
+    <footer></footer>
 </body>
 
 </html>
