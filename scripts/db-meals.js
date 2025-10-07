@@ -4,7 +4,7 @@ let myPizzas = [
         "price": 9.50,
         "description": "mit Krabben und Peperoni"
     }, {
-        "name": "pizza Margherita",
+        "name": "Pizza Margherita",
         "price": 5.90,
         "description": "mit Mozzarella"
     },
@@ -12,6 +12,21 @@ let myPizzas = [
         "name": "Pizza Diavolo (Scharf)",
         "price": 8.50,
         "description": "mit Salami, Zwiebeln, Paperoni und Knoblauch"
+    },
+    {
+        "name": "Pizza Pollo",
+        "price": 8.50,
+        "description": "mit Hähnchenbrust, Mais, Broccoli und Souce Hollandaise"
+    },
+    {
+        "name": "Pizza Salami",
+        "price": 8.50,
+        "description": "mit Salami"
+    },
+    {
+        "name": "Pizza Funghi",
+        "price": 8.50,
+        "description": "mit Pilzen, Schinken, und Zwiebeln"
     },
     {
         "name": "Pizzabrötchen",
