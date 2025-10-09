@@ -60,3 +60,21 @@ th {
 .first-img {
     object-fit: cover;
 }
+
+/* Buttons */
+.btn-basket {
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-basket:hover{
+    border: 2px solid #FF8000;
+    border-radius: 100%;
+}

@@ -5,13 +5,29 @@
 }
 
 .basket {
-    width: 100%;
+    width: 300px;
     height: 400px;
     padding-right: 8px;
     position: sticky;
     top: 0;
 }
 
+.basket-meal {
+    display: flex;
+    flex-direction: column;
+}
+
+.basket-delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 h4 {
     font-size: 2em;
+}
+
+h5{
+    color: rgb(77, 77, 77);
+    font-size: 15px;
 }
