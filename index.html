@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
 
-    <script src="./scripts/db-meals.js"></script>
+    <script src="./scripts/db-allmeals.js"></script>
     <script src="./scripts/templates.js"></script>
     <script src="script.js"></script>
 </head>
@@ -25,10 +25,12 @@
         </div>
         <div class="dropdown">
             <nav>
-                <button onclick="dropdownMenue()"></button>
+                <img id="dd-icon" class=" nav-img" onclick="dropdownMenue()"
+                    src="./assets/icons/symbols/bars-solid-full.svg" alt="bars-solid-full">
                 <div id="menue" class="dropdown-menue d_none">
                     <a href="#pizzas">Pizza</a>
                     <a href="#salads">Salate</a>
+                    <a href="#drinks">Getränke</a>
                 </div>
             </nav>
         </div>
@@ -41,16 +43,13 @@
             <h1>Paradies Noodles</h1>
             <span class="color-o">Bewertung (4.2 von 5 Sternen)</span>
             <nav>
-                <a href="#pizza">Haupgerichte</a>
+                <a href="#pizza">Pizza</a>
                 <a href="#salads">Salate</a>
+                <a href="#drinks">Getränke</a>
             </nav>
             <img src="" alt="Pizza">
             <div aria-label="Pizza" id="pizza" class="">
                 <h2>Pizza</h2>
-            </div>
-            <img src="" alt="Salat">
-            <div aria-label="Salate" id="salads">
-                <h2>Salate</h2>
             </div>
         </section>
         <section class="basket-wrapper">
@@ -61,15 +60,15 @@
                     <table>
                         <tr>
                             <td>Zwischensumme</td>
-                            <td id="sumMeals"></td>
+                            <td id="subPrice"></td>
                         </tr>
                         <tr>
                             <td>Lieferkosten</td>
-                            <td id="sumTakeaway"></td>
+                            <td id="deliveryPrice"></td>
                         </tr>
                         <tr>
                             <th>Gesamt</th>
-                            <th id="sumBasket"></th>
+                            <th id="totalBasket"></th>
                         </tr>
                     </table>
                 </div>

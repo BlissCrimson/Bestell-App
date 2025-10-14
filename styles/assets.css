@@ -6,6 +6,10 @@ table {
     width: 100%;
 }
 
+a {
+    color: white;
+}
+
 td,
 th {
     text-align: start;
@@ -23,15 +27,23 @@ th {
     background-color: #FF8000;
 }
 
-.border-color {
+/* .border-color {
     border-color: rgb(94, 94, 94);
+} */
+
+.nav-img {
+    width: 30px;
+    height: 30px;
 }
 
 .dropdown-menue {
+    color: white;
     position: absolute;
     background-color: #FF8000;
     min-width: 150px;
-    z-index: 1;
+    z-index: -1;
+
+    padding: 12px 16px;
 }
 
 .top-img {
@@ -58,23 +70,23 @@ th {
 }
 
 .first-img {
-    object-fit: cover;
+    object-fit: fill;
 }
 
 /* Buttons */
 .btn-basket {
     width: 30px;
     height: 30px;
-    font-size: 25px;
-    font-weight: bold;
     border: none;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.btn-basket:hover{
+.btn-basket:hover {
     border: 2px solid #FF8000;
     border-radius: 100%;
+}
+
+.bin {
+    height: 24px;
+    width: 24px;
 }

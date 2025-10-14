@@ -3,16 +3,22 @@
 }
 
 .meal-box {
-    border: 1px solid gray;
+    height: 90px;
+    border-radius: 16px;
     margin: 8px;
-    padding-left: 4px;
+    padding: 0px 16px;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.1); 
+box-shadow: 0px 13px 23px -1px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     justify-content: space-between;
 }
-.meal-box:hover{
+
+.meal-box:hover {
     background-color: rgba(255, 128, 0, 0.158);
 }
+
 .meal-show {
     height: 80px;
     display: flex;
