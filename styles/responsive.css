@@ -1,0 +1,14 @@
+@media (min-width: 701px) {
+    .btn-basket {
+        display: none;
+    }
+}
+@media (max-width: 700px) {
+    .basket-wrapper {
+        display: none;
+    }
+
+    .btn-basket {
+        display: block;
+    }
+}
