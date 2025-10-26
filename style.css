@@ -1,5 +1,6 @@
 header {
     width: 100%;
+    max-width: 1440px;
     height: 48px;
     color: white;
     background: #FF8000;
@@ -12,6 +13,12 @@ header {
     align-items: center;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Titles */
 h3 {
     color: rgb(77, 77, 77);
     font-size: 14px;
@@ -34,4 +41,8 @@ h3 {
     height: 28px;
     border: 2px solid #FF8000;
     border-radius: 16px;
+}
+
+.pos_absolut {
+    position: absolute;
 }
