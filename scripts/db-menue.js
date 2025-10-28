@@ -1,4 +1,4 @@
-const myPizzas = [
+const allMeals = [
     {
         "menu": {
             "main_disches": [
