@@ -14,7 +14,9 @@ td,
 th {
     text-align: start;
 }
-
+footer a:hover{
+    color: #0066ff;
+}
 .color-o {
     color: #FF8000;
 }
@@ -59,12 +61,14 @@ th {
 }
 
 .top-img {
+    width: 100%;
     height: 155px;
-    background-image: url("/assets/img/pizza_1920.jpg");
+    background-image: url(/assets/img/spices.jpg);
     background-size: cover;
+    border-radius: 0px 0px 6px 0px;
 }
 
-.central-img {
+.pizza-img {
     width: 128px;
     height: 128px;
     border: 1 solid #FF8000;
@@ -81,8 +85,11 @@ th {
     border-radius: 100px;
 }
 
-.first-img {
-    object-fit: fill;
+.meal-img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 /* Buttons */
@@ -99,9 +106,9 @@ th {
 }
 
 .btn-open-basket {
-    width: 100%;
+    width: 90%;
     height: 50px;
     font-size: 40px;
-    margin-top: 90vh;
+    margin-top: 82vh;
     border: none;
 }

@@ -1,7 +1,7 @@
 .basket-wrapper {
     width: 300px;
     margin-right: 4px;
-    padding: 8px 0px 0px 8px;
+    padding: 8px 0px;
     flex-grow: 1;
 }
 
@@ -28,7 +28,7 @@ h4 {
     font-size: 2em;
 }
 
-h5{
+h5 {
     color: rgb(77, 77, 77);
     font-size: 15px;
 }
