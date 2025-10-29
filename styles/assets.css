@@ -14,9 +14,11 @@ td,
 th {
     text-align: start;
 }
-footer a:hover{
+
+footer a:hover {
     color: #0066ff;
 }
+
 .color-o {
     color: #FF8000;
 }
@@ -44,6 +46,29 @@ footer a:hover{
 .nav-img {
     width: 30px;
     height: 30px;
+}
+
+.menu-navbar-icon {
+    height: 48px
+}
+
+.menu-navbar {
+    width: 90%;
+    height: 50px;
+    background-color: #c9c9c9;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-navbar a {
+    color: #434343;
+}
+
+.menu-navbar a:hover {
+    color: #ff8000;
 }
 
 .dropdown-menue {
