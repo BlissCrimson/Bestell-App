@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/dialogbasket.css">
     <link rel="stylesheet" href="./styles/dishcard.css">
     <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/standard.css">
 
-    <script src="./scripts/db-allmeals.js"></script>
+    <script src="./scripts/db-menue.js"></script>
+    <script src="./scripts/localstorage.js"></script>
     <script src="./scripts/templates.js"></script>
     <script src="script.js"></script>
 </head>
@@ -30,7 +33,9 @@
                 <div id="menue" class="dropdown-menue d_none">
                     <a href="#pizzas">Pizza</a>
                     <a href="#salads">Salate</a>
-                    <a href="#drinks">Getränke</a>
+                    <!-- <a href="#drinks">Getränke</a> -->
+                    <a href="datenschutzerklärung.html">Datenschutzerklärung</a>
+                    <a href="impressum.html">Impressum</a>
                 </div>
             </nav>
         </div>
@@ -38,25 +43,31 @@
     <div class="dish-card-wrapper">
         <section class="dish-card">
             <div class="top-img"> </div>
-            <img class="img-central" src="./assets/img/takeaway-noodlebox.svg" alt="Noodlebox">
-
             <h1>Paradies Noodles</h1>
-            <span class="color-o">Bewertung (4.2 von 5 Sternen)</span>
+            <span class="color-o">Bewertung (4.2 von 5 ⭐)</span>
             <nav>
                 <a href="#pizza">Pizza</a>
                 <a href="#salads">Salate</a>
-                <a href="#drinks">Getränke</a>
+                <!-- <a href="#drinks">Getränke</a> -->
             </nav>
-            <img src="" alt="Pizza">
-            <div aria-label="Pizza" id="pizza" class="">
-                <h2>Pizza</h2>
+            <img class="meal-img" src="./assets/img/pizza_1920.jpg" alt="Pizza">
+            <div aria-label="Pizza" id="meals" class="">
+                <h2 id="pizzas">Pizza</h2>
+                <h2 id="pizza">Pizza</h2>
             </div>
+            <img class="meal-img" src="./assets/img/salad.jpg" alt="Salat">
+            <div aria-label="Salate" id="saladMeals" class="">
+                <h2 id="salads">Salate</h2>
+            </div>
+            <button class="btn-open-basket  color-w bg-color-b pos-fixed" onclick="openDialog()">
+                Warenkorb
+            </button>
         </section>
         <section class="basket-wrapper">
             <div class="basket">
                 <h4>Warenkorb</h4>
                 <div>
-                    <div id="basketMeals"> </div>
+                    <div id="basket"> </div>
                     <table>
                         <tr>
                             <td>Zwischensumme</td>
@@ -64,18 +75,68 @@
                         </tr>
                         <tr>
                             <td>Lieferkosten</td>
-                            <td id="deliveryPrice"></td>
+                            <td id="deliveryPrice">5,00 €</td>
                         </tr>
                         <tr>
                             <th>Gesamt</th>
-                            <th id="totalBasket"></th>
+                            <th id="totalPrice"></th>
                         </tr>
                     </table>
                 </div>
+                <button class="btn, pos-fixed">
+                    <p>Bestellen</p>
+                </button>
             </div>
         </section>
+        <dialog id="dialogBasket" class="pos_absolut, dialog-basket">
+            <h4>Warenkorb</h4>
+            <div>
+                <div id="basketDialog"> </div>
+                <table>
+                    <tr>
+                        <td>Zwischensumme</td>
+                        <td id="dialogSubPrice"></td>
+                    </tr>
+                    <tr>
+                        <td>Lieferkosten</td>
+                        <td id="dialogDeliveryPrice">5,00 €</td>
+                    </tr>
+                    <tr>
+                        <th>Gesamt</th>
+                        <th id="dialogTotalPrice"></th>
+                    </tr>
+                </table>
+            </div>
+            <footer>
+                <button class="pos-fixed">Bestellen</button>
+            </footer>
+        </dialog>
+        <!-- <dialog id="basketDialog">
+            <h4>Warenkorb</h4>
+            <div>
+                <div id="dialog-basket"> </div>
+                <table>
+                    <tr>
+                        <td>Zwischensumme</td>
+                        <td id="subPrice"></td>
+                    </tr>
+                    <tr>
+                        <td>Lieferkosten</td>
+                        <td id="deliveryPrice"></td>
+                    </tr>
+                    <tr>
+                        <th>Gesamt</th>
+                        <th id="totalBasket"></th>
+                    </tr>
+                </table>
+            </div>
+        </dialog> -->
     </div>
-    <footer></footer>
+    <footer>
+        <span>&copy; 2025 Matthias Tausch</span>
+        <a href="Datenschutzerklärung.html">Datenschutzerklärung</a>
+        <a href="impressum.html">Impressum</a>
+    </footer>
 </body>
 
 </html>
