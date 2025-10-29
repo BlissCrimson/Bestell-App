@@ -1,5 +1,6 @@
 .basket-wrapper {
     width: 300px;
+    max-width: 300px;
     margin-right: 4px;
     padding: 8px 0px;
     flex-grow: 1;

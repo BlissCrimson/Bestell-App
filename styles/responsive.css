@@ -1,3 +1,9 @@
+@media (max-width: 1300px) {
+    header {
+        justify-content: space-between;
+    }
+}
+
 @media (min-width: 701px) {
     .btn-open-basket {
         display: none;
@@ -5,9 +11,10 @@
 }
 
 @media (max-width: 700px) {
- footer {
-    margin-top: 50px;
- }
+    footer {
+        margin-top: 50px;
+    }
+
     .basket-wrapper {
         display: none;
     }
@@ -16,19 +23,19 @@
         display: block;
     }
 
-.top-img{
-    border-radius: 0;
-}
+    .top-img {
+        border-radius: 0;
+    }
 }
 
 @media (max-width: 785px) {
     .meal-show {
-max-width: 306px;
+        max-width: 306px;
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
     .meal-show {
-max-width: 228px;
+        max-width: 228px;
     }
 }
