@@ -33,7 +33,7 @@ function getEmptyBasketTemplates() {
     `
 }
 
-function getBasketTemplates(indexBasket) {
+function getBasketTemplates(indexBasket, idbasketDialog) {
     return `
         <div class="basket-meal">
             <h5>${basket.mealTitle[indexBasket]}</h4>

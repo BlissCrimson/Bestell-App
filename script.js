@@ -46,7 +46,7 @@ function renderSaladMeals() {
 function renderCompleteBasket() {
     renderBasket('basket');
     renderBasket('basketDialog');
-    // renderDialogBasket('basketDialog');
+    renderDialogBasket('basketDialog');
     renderSubtotalPrice('subPrice');
     renderSubtotalPrice('dialogsubPrice');
     renderTotalPrice('totalPrice');
@@ -64,13 +64,14 @@ function renderBasket(idbasket) {
         dishMealRef.innerHTML = getEmptyBasketTemplates();
     } else {
         for (let indexBasket = 0; indexBasket < basket.mealTitle.length; indexBasket++) {
-            dishMealRef.innerHTML += getBasketTemplates(indexBasket, idbasket);
+            dishMealRef.innerHTML += getBasketTemplates(indexBasket);
         }
     }
 }
 
 function renderDialogBasket(idbasketDialog) {
     let dialogBasketRef = document.getElementById(idbasketDialog);
+    dialogBasketRef.innerHTML = "";
     if (!basket.mealTitle || basket.mealTitle.length === 0) {
         dialogBasketRef += getEmptyBasketTemplates();
     } else {
@@ -193,9 +194,8 @@ function deleteFromBasket(indexBasket) {
 // OPEN&CLOSE DIALOG
 function openDialog() {
     let dialogRef = document.getElementById('dialogBasket');
-    renderCompleteBasket()
+    // renderCompleteBasket()
     getFromLocalStorage();
-    // getDialogBasketTemplates(indexBasket);
     dialogRef.showModal();
 }
 
