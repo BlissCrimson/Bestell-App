@@ -53,10 +53,6 @@ function renderCompleteBasket() {
     renderTotalPrice('dialogTotalBasket');
 }
 
-function basketCalculation() {
-
-}
-
 function renderBasket(idbasket) {
     let dishMealRef = document.getElementById('basket');
     dishMealRef.innerHTML = "";
