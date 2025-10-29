@@ -148,3 +148,11 @@ footer a:hover {
     margin-top: -44px;
     margin-left: 83%;
 }
+
+.btn-order-dialog {
+    width: 150px;
+    height: 32px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}

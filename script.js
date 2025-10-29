@@ -15,7 +15,6 @@ function init() {
     renderCompleteBasket();
     renderSaladMeals();
     renderAllMeals();
-    basketCalculation();
 }
 
 function dropdownMenue() {
@@ -48,42 +47,38 @@ function renderCompleteBasket() {
     renderBasket('basket');
     renderBasket('basketDialog');
     // renderDialogBasket('basketDialog');
-}
-
-function basketCalculation() {
     renderSubtotalPrice('subPrice');
     renderSubtotalPrice('dialogsubPrice');
     renderTotalPrice('totalPrice');
     renderTotalPrice('dialogTotalBasket');
 }
 
+function basketCalculation() {
+
+}
+
 function renderBasket(idbasket) {
     let dishMealRef = document.getElementById('basket');
-    // let dialogMealRef = document.getElementById('basketDialog')
     dishMealRef.innerHTML = "";
     if (!basket.mealTitle || basket.mealTitle.length === 0) {
         dishMealRef.innerHTML = getEmptyBasketTemplates();
     } else {
         for (let indexBasket = 0; indexBasket < basket.mealTitle.length; indexBasket++) {
-            basketCalculation();
             dishMealRef.innerHTML += getBasketTemplates(indexBasket, idbasket);
         }
     }
 }
 
-// function renderDialogBasket(idbasketDialog) {
-//     let dialogBasketRef = document.getElementById(idbasketDialog);
-//     if (!basket.mealTitle || basket.mealTitle.length === 0) {
-//         dialogBasketRef += getEmptyBasketTemplates();
-//     } else {
-//         for (let indexBasket = 0; indexBasket < basket.mealTitle.length; indexBasket++) {
-//             basketCalculation();
-//             dialogBasketRef.innerHTML += getDialogBasketTemplates(indexBasket);
-//         }
-//     }
-//     // renderBasket();
-//     // dialogBasketRef.innerHTML += getDialogBasketTemplates(indexBasket);
-// }
+function renderDialogBasket(idbasketDialog) {
+    let dialogBasketRef = document.getElementById(idbasketDialog);
+    if (!basket.mealTitle || basket.mealTitle.length === 0) {
+        dialogBasketRef += getEmptyBasketTemplates();
+    } else {
+        for (let indexBasket = 0; indexBasket < basket.mealTitle.length; indexBasket++) {
+            dialogBasketRef.innerHTML += getDialogBasketTemplates(indexBasket);
+        }
+    }
+}
 // ADD ORDER TO BASKET
 function addMealToBasket(indexAllMeals, indexMeals, indexBasket) {
     let allMealRef = allMeals[indexAllMeals].menu.main_disches[indexMeals];
@@ -107,6 +102,7 @@ function addSaladToBasket(indexAllMeals, indexMeals) {
     } else {
         pushAmountToBasket(indexAllMeals, saledTitleRef, saladPriceRef);
     }
+    saveToLocalStorage();
 }
 
 function pushOrderToBasket(indexAllMeals, mealTitleRef, mealPriceRef) {
@@ -114,21 +110,19 @@ function pushOrderToBasket(indexAllMeals, mealTitleRef, mealPriceRef) {
     basket.price.push(mealPriceRef);
     basket.amount.push(1);
     renderCompleteBasket();
-    basketCalculation();
+    saveToLocalStorage();
 }
 
 function pushAmountToBasket(indexAllMeals, mealTitleRef) {
     basket.amount[basket.mealTitle.indexOf(mealTitleRef)] += 1;
     renderCompleteBasket();
-    basketCalculation();
+    saveToLocalStorage();
 }
 // BASKET AMOUNT
 function fewerMeal(indexBasket) {
     if (basket.amount[indexBasket] > 1) {
         basket.amount[indexBasket] -= 1;
         renderCompleteBasket();
-        basketCalculation();
-        saveToLocalStorage();
     } else {
         deleteFromBasket();
     }
@@ -138,7 +132,6 @@ function fewerMeal(indexBasket) {
 function moreMeal(indexBasket) {
     basket.amount[indexBasket]++;
     renderCompleteBasket();
-    basketCalculation();
     saveToLocalStorage();
 }
 
@@ -195,26 +188,35 @@ function deleteFromBasket(indexBasket) {
     basket.amount.splice(indexBasket, 1);
     trashBasketRef.innerHTML = "";
     renderCompleteBasket();
-    basketCalculation();
     saveToLocalStorage();
 }
 // OPEN&CLOSE DIALOG
 function openDialog() {
     let dialogRef = document.getElementById('dialogBasket');
     renderCompleteBasket()
-    basketCalculation();
     getFromLocalStorage();
     // getDialogBasketTemplates(indexBasket);
     dialogRef.showModal();
 }
-// function openShoppingCardDialog() {
-//   let dialogRef = document.getElementById('shoppingCard_overlay');
-//   renderShoppingCardContent()
-//   getFromLocalStorage();
-//   dialogRef.showModal();
-// }
 
 function closeDialog() {
     let dialogRef = document.getElementById('dialogBasket');
     dialogRef.close();
+}
+
+function sendOrder() {
+    let orderDialogRef = document.getElementById('orderDialog');
+    let mealTitleLS = localStorage.getItem("mealTitle");
+    if (mealTitleLS === null) {
+    } else {
+        orderDialogRef.showModal();
+    }
+}
+
+function closeOrder() {
+    let orderDialogRef = document.getElementById('orderDialog');
+    orderDialogRef.close();
+    localStorage.clear();
+    init();
+    closeDialog();
 }
